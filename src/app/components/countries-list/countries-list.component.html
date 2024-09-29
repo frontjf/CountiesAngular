@@ -1,0 +1,23 @@
+<input 
+  type="text" 
+  placeholder="Buscar país" 
+  (input)="searchCountry($event)" 
+/>
+
+<select 
+  (change)="filterByRegion($event)" 
+>
+  <option value="">Todos</option>
+  <option value="Africa">Africa</option>
+  <option value="Americas">Americas</option>
+  <option value="Asia">Asia</option>
+  <option value="Europe">Europe</option>
+  <option value="Oceania">Oceania</option>
+</select>
+
+<div *ngFor="let country of filteredCountries">
+  <h3>{{ country.name.common }}</h3>
+  <p>{{ country.region }}</p>
+  <a [routerLink]="['/country', country.name.common]">Ver detalles</a>
+</div>
+
