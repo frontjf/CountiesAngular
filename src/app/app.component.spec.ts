@@ -20,10 +20,12 @@ describe('AppComponent', () => {
     expect(app.title).toEqual('countries-app');
   });
 
-  it('should render title', () => {
+  it('should render router outlet', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('countries-app app is running!');
+    expect(compiled.querySelector('router-outlet')).toBeTruthy();
+    // Verifica que el router-outlet esté presente en el DOM
   });
 });
+

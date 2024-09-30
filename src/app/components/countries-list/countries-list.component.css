@@ -1,28 +1,44 @@
-input {
-    padding: 10px;
-    margin-bottom: 20px;
-    width: 300px;
-  }
-  
-  select {
-    padding: 10px;
-    margin-left: 10px;
-  }
-  
-  div {
+
+ 
+  .search-filter-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; /* Espacio entre el input y el select */
     margin-bottom: 20px;
   }
   
-  h2 {
-    color: #333;
+  .search-filter-container input {
+    padding: 10px;
+    font-size: 16px;
   }
   
-  a {
-    color: blue;
+  .search-filter-container select {
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  .countries-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px; /* Espacio entre los nombres de los países */
+  }
+  
+  .country-link {
     text-decoration: none;
+    color: black;
+    transition: color 0.3s;
   }
   
-  a:hover {
-    text-decoration: underline;
+  .country-link:hover {
+    color: blue;
+    cursor: pointer;
+  }
+  
+  .separator {
+    margin: 0 5px;
+    color: #888; /* Color del separador */
   }
   
