@@ -1,6 +1,7 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing'; // Se importan HttpClientTestingModule y HttpTestingController
+import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing'; // Se importan HttpClientTestingModule y HttpTestingController
 import { CountriesService } from './countries.service';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 describe('CountriesService', () => {
   let service: CountriesService;
@@ -8,9 +9,9 @@ describe('CountriesService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule], // Se importa HttpClientTestingModule para simular peticiones HTTP
-      providers: [CountriesService]
-    });
+    imports: [],
+    providers: [CountriesService, provideHttpClient(withInterceptorsFromDi()), provideHttpClientTesting()]
+});
     
     service = TestBed.inject(CountriesService);
     httpTestingController = TestBed.inject(HttpTestingController); // Inyección del controlador de pruebas HTTP

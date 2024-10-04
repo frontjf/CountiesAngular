@@ -3,7 +3,7 @@ import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';  // Necesario para simular observables
 import { CountryDetailComponent } from './country-detail.component';
 import { CountriesService } from '../../services/countries.service'; // Asegúrate de importar el servicio
-import { HttpClientModule } from '@angular/common/http'; // Importa el HttpClientModule
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http'; // Importa el HttpClientModule
 
 describe('CountryDetailComponent', () => {
   let component: CountryDetailComponent;
@@ -27,25 +27,27 @@ describe('CountryDetailComponent', () => {
     };
 
     await TestBed.configureTestingModule({
-      imports: [HttpClientModule], // Agregar HttpClientModule
-      declarations: [CountryDetailComponent],
-      providers: [
+    declarations: [CountryDetailComponent],
+    imports: [],
+    providers: [
         {
-          provide: ActivatedRoute,
-          useValue: {
-            snapshot: {
-              paramMap: {
-                get: () => 'country-code',  // Simula la obtención de un parámetro de la URL
-              },
+            provide: ActivatedRoute,
+            useValue: {
+                snapshot: {
+                    paramMap: {
+                        get: () => 'country-code', // Simula la obtención de un parámetro de la URL
+                    },
+                },
+                paramMap: of({
+                    get: (key: string) => 'country-code', // Simulación del observable paramMap
+                }),
             },
-            paramMap: of({
-              get: (key: string) => 'country-code',  // Simulación del observable paramMap
-            }),
-          },
         },
         { provide: CountriesService, useValue: countriesServiceMock } // Proveer el servicio simulado
-      ],
-    }).compileComponents();
+        ,
+        provideHttpClient(withInterceptorsFromDi())
+    ]
+}).compileComponents();
 
     fixture = TestBed.createComponent(CountryDetailComponent);
     component = fixture.componentInstance;
