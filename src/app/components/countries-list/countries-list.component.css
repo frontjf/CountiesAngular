@@ -1,11 +1,10 @@
+/*
 
- 
   .search-filter-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px; /* Espacio entre el input y el select */
-    margin-bottom: 20px;
+    gap: 10px; 
   }
   
   .search-filter-container input {
@@ -23,7 +22,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
-    gap: 10px; /* Espacio entre los nombres de los países */
+    gap: 10px;
   }
   
   .country-link {
@@ -39,6 +38,291 @@
   
   .separator {
     margin: 0 5px;
-    color: #888; /* Color del separador */
+    color: #888; 
   }
-  
+
+.mapa {
+
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  margin-top: -220px; 
+ 
+
+  ul#continentes {
+    list-style: none;
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjF5HwgSBm1xb0Xk3Pr2S7spohR6xGixr7P47tUScxqKw7ZoDtyT3ob7cE-pFIripqkYTQOt8Eq8rXzWZ2l9eeNr7c1oZd_JrORAuJWnlxvDV91VQBHQBsZEKg8CQPc1pr6G7D_s9aW-x8/s580/mapa%2520mundo%2520-%2520REDEANDO.png) no-repeat 0 0;
+    position: relative;
+    width: 580px;
+    height: 268px;
+    margin: 0 auto;
+    padding: 0;
+    }
+    ul#continentes li {
+    position: absolute;
+    }
+    ul#continentes li a{
+    display: block;
+    height: 100%;
+    text-decoration: none;
+    }
+    #norteamerica {
+    width: 227px;
+    height: 142px;
+    top: 2px;
+    left: 0px;
+    }
+    #suramerica {
+    width: 108px;
+    height: 130px;
+    top: 131px;
+    left: 76px;
+    }
+    #africa {
+    width: 120px;
+    height: 140px;
+    top: 83px;
+    left: 209px;
+    }
+    #europa {
+    width: 120px;
+    height: 84px;
+    top: 1px;
+    left: 211px;
+    }
+    #asia {
+    width: 215px;
+    height: 175px;
+    top: 1px;
+    left: 283px;
+    }
+    #australia {
+    width: 114px;
+    height: 95px;
+    top: 152px;
+    left: 432px;
+    }
+    ul#continentes li a:hover {
+    background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjF5HwgSBm1xb0Xk3Pr2S7spohR6xGixr7P47tUScxqKw7ZoDtyT3ob7cE-pFIripqkYTQOt8Eq8rXzWZ2l9eeNr7c1oZd_JrORAuJWnlxvDV91VQBHQBsZEKg8CQPc1pr6G7D_s9aW-x8/s580/mapa%2520mundo%2520-%2520REDEANDO.png) no-repeat 0 0;
+    }
+    ul#continentes li#norteamerica a:hover {
+    background-position: 0 -270px;
+    }
+    ul#continentes li#suramerica a:hover {
+    background-position: -226px -273px;
+    }
+    ul#continentes li#africa a:hover {
+    background-position: -209px -417px;
+    }
+    ul#continentes li#europa a:hover {
+    background-position: -22px -427px;
+    }
+    ul#continentes li#asia a:hover {
+    background-position: -363px -268px;
+    }
+    ul#continentes li#australia a:hover {
+    background-position: -412px -455px;
+    }
+    ul#continentes li a span {
+    display: none;
+    }
+    ul#continentes li a:hover span {
+    display: block;
+    }
+    ul#continentes li a:hover span {
+    display: block;
+    padding: 5px;
+    width: 150px;
+    background: #000;
+    position: relative;
+    top: 50%;
+    font: 11px Arial, Helvetica, sans-serif;
+    opacity: .75;
+    filter:alpha(opacity=75);
+    color: #FFF;
+    }
+    ul#continentes li a:hover span strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 12px;
+    text-decoration: underline;
+    }
+}
+*/
+
+
+
+.search-filter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; 
+  margin-bottom: 20px;
+}
+
+.search-filter-container input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.search-filter-container select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.countries-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px; 
+}
+
+.country-link {
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s;
+}
+
+.country-link:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.separator {
+  margin: 0 5px;
+  color: #888; 
+}
+
+.mapa {
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  height: 100vh; 
+  margin-top: -220px; 
+}
+
+ul#continentes {
+  list-style: none;
+  background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjF5HwgSBm1xb0Xk3Pr2S7spohR6xGixr7P47tUScxqKw7ZoDtyT3ob7cE-pFIripqkYTQOt8Eq8rXzWZ2l9eeNr7c1oZd_JrORAuJWnlxvDV91VQBHQBsZEKg8CQPc1pr6G7D_s9aW-x8/s580/mapa%2520mundo%2520-%2520REDEANDO.png) no-repeat 0 0;
+  position: relative;
+  width: 580px;
+  height: 268px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+ul#continentes li {
+  position: absolute;
+}
+
+ul#continentes li a {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+#norteamerica {
+  width: 227px;
+  height: 142px;
+  top: 2px;
+  left: 0px;
+}
+
+#suramerica {
+  width: 108px;
+  height: 130px;
+  top: 131px;
+  left: 76px;
+}
+
+#africa {
+  width: 120px;
+  height: 140px;
+  top: 83px;
+  left: 209px;
+}
+
+#europa {
+  width: 120px;
+  height: 84px;
+  top: 1px;
+  left: 211px;
+}
+
+#asia {
+  width: 215px;
+  height: 175px;
+  top: 1px;
+  left: 283px;
+}
+
+#australia {
+  width: 114px;
+  height: 95px;
+  top: 152px;
+  left: 432px;
+}
+
+ul#continentes li a:hover {
+  background: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjF5HwgSBm1xb0Xk3Pr2S7spohR6xGixr7P47tUScxqKw7ZoDtyT3ob7cE-pFIripqkYTQOt8Eq8rXzWZ2l9eeNr7c1oZd_JrORAuJWnlxvDV91VQBHQBsZEKg8CQPc1pr6G7D_s9aW-x8/s580/mapa%2520mundo%2520-%2520REDEANDO.png) no-repeat 0 0;
+}
+
+ul#continentes li#norteamerica a:hover {
+  background-position: 0 -270px;
+}
+
+ul#continentes li#suramerica a:hover {
+  background-position: -226px -273px;
+}
+
+ul#continentes li#africa a:hover {
+  background-position: -209px -417px;
+}
+
+ul#continentes li#europa a:hover {
+  background-position: -22px -427px;
+}
+
+ul#continentes li#asia a:hover {
+  background-position: -363px -268px;
+}
+
+ul#continentes li#australia a:hover {
+  background-position: -412px -455px;
+}
+
+ul#continentes li a span {
+  display: none;
+}
+
+ul#continentes li a:hover span {
+  display: block;
+}
+
+ul#continentes li a:hover span {
+  display: block;
+  padding: 5px;
+  width: 150px;
+  background: #000;
+  position: relative;
+  top: 50%;
+  font: 11px Arial, Helvetica, sans-serif;
+  opacity: .75;
+  filter: alpha(opacity=75);
+  color: #FFF;
+}
+
+ul#continentes li a:hover span strong {
+  display: block;
+  margin-bottom: 2px;
+  font-size: 12px;
+  text-decoration: underline;
+}
+
+.highlight {
+  background-color: rgba(255, 215, 0, 0.5); 
+  transition: background-color 0.3s ease;  
+}
+
