@@ -1,10 +1,10 @@
-# Esta prueba me ha costado lo suyo, he vuelto a repasar Angular y he tenido que aprender a hacer test, he hecho lo que he podido con los conocimientos que tengo y la ayuda de internet
+### Esta prueba ha sido un desafio ya que he tenido que implementar test con Jazmine por primera vez, rambien me ha servido para actualizarme a Angular 18.
 
-# Countries App
+## Countries App
 
 Aplicación web de Angular que permite a los usuarios buscar y filtrar países a través de una API REST. La aplicación incluye búsqueda por nombre de país, filtrado por región y la visualización de detalles de cada país. Además, se han implementado pruebas unitarias para garantizar el correcto funcionamiento de la web (ng test).
 
-## Estructura del Proyecto
+### Estructura del Proyecto
 
 La estructura del proyecto es la siguiente:
 
@@ -20,7 +20,7 @@ La estructura del proyecto es la siguiente:
   - **index.html**: Archivo HTML principal de la aplicación.
   - **styles.css**: Estilos globales de la aplicación.
 
-## Implementación de Funcionalidades
+### Implementación de Funcionalidades
 
 ### Búsqueda y Filtrado de Países
 
@@ -32,7 +32,7 @@ La estructura del proyecto es la siguiente:
 - En la página de detalles del país, se muestran información relevante como el nombre del país, la bandera y otros detalles.
 - Se añadió un botón para volver a la página principal desde la página de detalles.
 
-## Pruebas Unitarias
+### Pruebas Unitarias
 
 Se han implementado pruebas unitarias para asegurar el correcto funcionamiento de los componentes y servicios (ng test). Las pruebas incluyen:
 
